@@ -4,6 +4,11 @@ import { useState } from "react";
 import TokenContext from "./contexts/TokenContext.js";
 import UrlContext from "./contexts/UrlContext.js";
 
+import HomePage from "./pages/HomePage.js";
+import RankingPage from "./pages/RankingPage.js";
+import SignIn from "./pages/SignIn.js";
+import SignUp from "./pages/SignUp.js";
+
 export default function App() {
     const [token, setToken] = useState(null);
     const [url, setUrl] = useState('https://shortyl-16th.herokuapp.com');
@@ -14,9 +19,9 @@ export default function App() {
                 <BrowserRouter>
                     <Routes>
                             <Route path="/" element={<HomePage />} />
-                            {/* <Route path="/signin" element={} />
-                            <Route path="/signup" element={} />
-                            <Route path="/ranking" element={} /> */}
+                            <Route path="/signin" element={<SignIn />} />
+                            <Route path="/signup" element={<SignUp />} />
+                            <Route path="/ranking" element={<RankingPage />} />
                     </Routes>
                 </BrowserRouter>
             </UrlContext.Provider>
