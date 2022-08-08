@@ -3,6 +3,7 @@ import axios from "axios";
 
 import UrlContext from "../contexts/UrlContext.js";
 import Header from "../components/shared/PageHeaders.js";
+import { Buttons, Inputs } from "../components/shared/Button&Input.js";
 
 import styled from "styled-components";
 
@@ -14,6 +15,9 @@ export default function HomePage(){
     // }, []);
 
     return(
-        <Header />
+        <>
+                <Header />
+        </>
+
     )
 }
